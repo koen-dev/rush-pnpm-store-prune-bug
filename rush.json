@@ -16,7 +16,7 @@
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.124.0",
+  "rushVersion": "5.126.0",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -26,7 +26,7 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
    */
-   "pnpmVersion": "8.7.6",
+  "pnpmVersion": "8.7.6",
 
   // "npmVersion": "6.14.15",
   // "yarnVersion": "1.9.4",
@@ -140,9 +140,9 @@
     "reviewCategories": [
       // Some example categories:
       "production", // projects that ship to production
-      "tools",      // non-shipping projects that are part of the developer toolchain
-      "prototypes"  // experiments that should mostly be ignored by the review process
-    ],
+      "tools", // non-shipping projects that are part of the developer toolchain
+      "prototypes" // experiments that should mostly be ignored by the review process
+    ]
 
     /**
      * A list of NPM package scopes that will be excluded from review.
@@ -169,10 +169,7 @@
      * IMPORTANT: Because these are regular expressions encoded as JSON string literals,
      * RegExp escapes need two backslashes, and ordinary periods should be "\\.".
      */
-    "allowedEmailRegExps": [
-      "[^@]+@users\\.noreply\\.github\\.com",
-      "rush-bot@example\\.org"
-    ],
+    "allowedEmailRegExps": [],
 
     /**
      * When Rush reports that the address is malformed, the notice can include an example
@@ -204,7 +201,7 @@
      *
      * If no commit message is set it will default to 'Rush change'
      */
-     "changefilesCommitMessage": "Rush change"
+    "changefilesCommitMessage": "Rush change"
   },
 
   "repository": {
@@ -224,13 +221,11 @@
      * to retrieve the latest activity for the remote main branch.
      */
     // "url": "https://github.com/microsoft/rush-example",
-
     /**
      * The default branch name. This tells "rush change" which remote branch to compare against.
      * The default value is "main"
      */
     // "defaultBranch": "main",
-
     /**
      * The default remote. This tells "rush change" which remote to compare against if the remote URL is
      * not set or if a remote matching the provided remote URL is not found.
@@ -354,7 +349,7 @@
        */
       "decoupledLocalDependencies": [
         // "my-toolchain"
-      ],
+      ]
 
       /**
        * If true, then this project will be ignored by the "rush check" command.
@@ -399,14 +394,14 @@
       "packageName": "my-controls",
       "projectFolder": "libraries/my-controls",
       "reviewCategory": "production",
-      "tags": [ "frontend-team" ]
+      "tags": ["frontend-team"]
     },
 
     {
       "packageName": "my-toolchain",
       "projectFolder": "tools/my-toolchain",
       "reviewCategory": "tools",
-      "tags": [ "tools" ]
+      "tags": ["tools"]
     }
   ]
 }
